@@ -10,23 +10,120 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 
     <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <title>Frontend Mentor | Stats preview card component</title>
     <style>
       .container_stats_preview {
         margin-top: 5%;
+        margin-bottom: 5%;
+      }
+      body {
+        background-color: hsl(233, 47%, 7%);
+      }
+      .bg_dark_violet {
+        background-color: hsl(244, 38%, 16%);
+      }
+      .title {
+        font-weight: 700;
+        color: hsl(0, 0%, 100%);
+      }
+      .violet {
+        color: hsl(277, 64%, 61%);
+      }
+      .description {
+        font-size: 15px;
+        color: hsla(0, 0%, 100%, 0.75);
+      }
+      .number {
+        color: hsl(0, 0%, 100%);
+
+      }
+      .label {
+        color: hsla(0, 0%, 100%, 0.6);
+      }
+      .img_filter {
+        fill-opacity: hsl(277, 64%, 61%, 0.7);
+      }
+      .container_card {
+        padding: 20px;
+      }
+      .container_img {
+        position: relative;
+      }
+      .img_filter {
+        background-color: hsl(277, 64%, 61%);
+        opacity: 0.5;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+      }
+      .img_fill {
+        
+        background-image: url("images/image-header-desktop.jpg");
+        background-color: hsl(277, 64%, 61%);
+        background-blend-mode:multiply;
+        background-size: cover;
+        width: 100%;
+        height: 100%;
+      }
+      .img_card {
+        
+        background-color: hsl(277, 64%, 61%);
+        background-blend-mode:multiply;
       }
     </style>
   </head>
   <body>
     <main>
       <div class="container container_stats_preview">
-        <div class="row">
-          <div class="col-md-6 order-2 order-md-1">
-            aa
+        <div class="row ">
+          <div class="col-md-6 p-0 order-2 order-md-1 bg_dark_violet">
+            <div class="container_card">
+              <h1 class="title">
+                Get <span class="violet">insights</span>  that help your business grow.
+              </h1>
+              <p class="description">
+                Discover the benefits of data analytics and make better decisions regarding revenue, customer experience, and overall efficiency.
+              </p>
+              <div class="row">
+                <div class="col-md-3 ">
+                  <h2 class="number">
+                    10K+ 
+                  </h2>
+                  <div class="label">
+                    COMPANIES
+                  </div>
+                </div>
+                <div class="col-md-3">
+                  <h2 class="number">
+                    314
+                  </h2>
+                  <div class="label">
+                    TEMPLATES
+                  </div>
+                  
+                </div>
+                <div class="col-md-3">
+                  <h2 class="number">
+                    12m+ 
+                  </h2>
+                  <div class="label">
+                    QUERIES
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
-          <div class="col-md-6 order-1 order-md-2">
-            <img src="images/image-header-desktop.jpg" class="img-fluid" alt="image">
+          <div class="col-md-6 p-0 order-1 order-md-2">
+            <!-- <div class="img_fill img-fluid"></div> -->
+            <div class="container_img ">
+
+              <img src="images/image-header-desktop.jpg" class="w-100 img_card" alt="image">
+              <div class="  img_filter"></div>
+            </div>
           </div>
         </div>
       </div>
