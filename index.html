@@ -52,8 +52,10 @@
         position: relative;
       }
       .img_filter {
+        /* background-image: url("images/image-header-desktop.jpg"); */
         background-color: hsl(277, 64%, 61%);
-        opacity: 0.5;
+        opacity: 0.42;
+        /* background-blend-mode:multiply; */
         position: absolute;
         top: 0;
         bottom: 0;
@@ -74,21 +76,46 @@
         background-color: hsl(277, 64%, 61%);
         background-blend-mode:multiply;
       }
+      @media only screen and (max-width: 767px) {
+        .title {
+          text-align: center;
+        }
+        .description {
+          text-align: center;
+        }
+        .stats_row {
+          text-align: center;
+        }
+        .bg_dark_violet {
+          border-radius: 0 0px 10px 10px;
+        }
+        .img_card_col, .img_filter, .img_card {
+          border-radius: 10px 10px 0 0px;
+        }
+      }
+      @media only screen and (min-width: 768px) {
+        .bg_dark_violet {
+          border-radius: 10px 0 0 10px;
+        }
+        .img_card_col, .img_filter, .img_card {
+          border-radius: 0 10px 10px 0;
+        }
+      }
     </style>
   </head>
   <body>
     <main>
       <div class="container container_stats_preview">
-        <div class="row ">
-          <div class="col-md-6 p-0 order-2 order-md-1 bg_dark_violet">
-            <div class="container_card">
-              <h1 class="title">
+        <div class="row px-3">
+          <div class="col-md-6 p-0 order-2 order-md-1 bg_dark_violet align-items-stretch">
+            <div class="container_card px-5 py-5">
+              <h1 class="title mb-3 ">
                 Get <span class="violet">insights</span>  that help your business grow.
               </h1>
-              <p class="description">
+              <p class="description mb-3">
                 Discover the benefits of data analytics and make better decisions regarding revenue, customer experience, and overall efficiency.
               </p>
-              <div class="row">
+              <div class="row stats_row">
                 <div class="col-md-3 ">
                   <h2 class="number">
                     10K+ 
@@ -117,7 +144,7 @@
               </div>
             </div>
           </div>
-          <div class="col-md-6 p-0 order-1 order-md-2">
+          <div class="col-md-6 p-0 order-1 order-md-2 img_card_col align-items-stretch">
             <!-- <div class="img_fill img-fluid"></div> -->
             <div class="container_img ">
 
